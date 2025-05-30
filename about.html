@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - HungerHub</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="nav-brand">
+        <img src="assets/images/logo.png" alt="HungerHub Logo">
+      </div>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="menu.html">Menu</a>
+        <a href="about.html" class="active">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="nav-actions">
+        <a href="cart.html" class="cart-icon">
+          <i class="fas fa-shopping-cart"></i>
+          <span class="cart-count">0</span>
+        </a>
+        <a href="login.html" class="login-btn">Login</a>
+      </div>
+    </nav>
+
+    <main>
+      <section class="about-section">
+        <div class="about-content">
+          <h1>About HungerHub</h1>
+          <div class="about-text">
+            <h2>Welcome to Hungerhub – Your Favorite Meals, Just a Click Away!</h2>
+            <p>At Hungerhub, we believe that good food brings people together. That's why we've created an easy-to-use online food ordering platform that connects customers with their favorite local restaurants. Whether you're craving a quick lunch, a cozy dinner, or a treat for your team at work, Hungerhub delivers delicious options right to your doorstep.</p>
+            
+            <h2>Our Mission</h2>
+            <p>To make food ordering fast, friendly, and accessible for everyone by combining technology with a passion for great meals. We aim to support local businesses and provide our users with a reliable, enjoyable food ordering experience.</p>
+
+            <h2>Our Story</h2>
+            <p>HungerHub began with a simple mission: to make authentic Indian food accessible to everyone. Our journey started with a small kitchen and a big dream. Today, we're proud to serve thousands of customers with our extensive menu of traditional and contemporary Indian dishes.</p>
+            
+            <h2>Our Commitment</h2>
+            <div class="commitment-grid">
+              <div class="commitment-item">
+                <i class="fas fa-utensils"></i>
+                <h3>Quality Ingredients</h3>
+                <p>We use only the freshest ingredients to ensure authentic taste and quality in every dish.</p>
+              </div>
+              <div class="commitment-item">
+                <i class="fas fa-truck"></i>
+                <h3>Fast Delivery</h3>
+                <p>Our efficient delivery system ensures your food arrives hot and fresh, every time.</p>
+              </div>
+              <div class="commitment-item">
+                <i class="fas fa-heart"></i>
+                <h3>Customer Satisfaction</h3>
+                <p>Your satisfaction is our top priority. We strive to exceed your expectations with every order.</p>
+              </div>
+            </div>
+
+            <h2>Our Team</h2>
+            <p>Behind every delicious meal is our team of experienced chefs and dedicated staff. Our chefs bring years of expertise in Indian cuisine, ensuring that every dish we serve is authentic and made with love.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>HungerHub</h3>
+          <p>Delivering happiness through food</p>
+        </div>
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <a href="menu.html">Menu</a>
+          <a href="about.html">About Us</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer-section">
+          <h3>Contact Us</h3>
+          <p>Email: info@hungerhub.com</p>
+          <p>Phone: (555) 123-4567</p>
+        </div>
+        <div class="footer-section">
+          <h3>Follow Us</h3>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 HungerHub. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        // Update cart count
+        const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+        const cartCount = document.querySelector('.cart-count');
+        if (cartCount) {
+          const totalItems = cartItems.reduce((total, item) => total + item.quantity, 0);
+          cartCount.textContent = totalItems;
+        }
+
+        // Check login status
+        const isLoggedIn = localStorage.getItem('isLoggedIn');
+        const loginBtn = document.querySelector('.login-btn');
+        if (isLoggedIn === 'true') {
+          loginBtn.textContent = 'Logout';
+          loginBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            localStorage.removeItem('isLoggedIn');
+            localStorage.removeItem('userEmail');
+            window.location.href = 'index.html';
+          });
+        }
+      });
+    </script>
+  </body>
+</html> 

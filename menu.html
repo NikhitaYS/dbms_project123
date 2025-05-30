@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - HungerHub</title>
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="assets/images/logo.png" alt="HungerHub Logo">
+            </div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="menu.html" class="active">Menu</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="nav-actions">
+                <a href="cart.html" class="cart-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span id="cart-count">0</span>
+                </a>
+                <a href="login.html" class="login-btn">Login</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="search-section">
+            <div class="search-container">
+                <input type="text" id="search" placeholder="Search for food...">
+                <button id="voice-btn" title="Voice Search">
+                    <i class="fas fa-microphone"></i>
+                </button>
+            </div>
+            <div id="voice-transcript"></div>
+        </section>
+
+        <section class="filters-section">
+            <div class="filters">
+                <select id="category" aria-label="Select category">
+                    <option value="">All Categories</option>
+                    <option value="appetizers">Appetizers</option>
+                    <option value="main course">Main Course</option>
+                    <option value="desserts">Desserts</option>
+                    <option value="beverages">Beverages</option>
+                </select>
+
+                <select id="price" aria-label="Select price range">
+                    <option value="">All Prices</option>
+                    <option value="0-100">Under ₹100</option>
+                    <option value="100-200">₹100 - ₹200</option>
+                    <option value="200-300">₹200 - ₹300</option>
+                    <option value="300+">Over ₹300</option>
+                </select>
+
+                <select id="rating" aria-label="Select minimum rating">
+                    <option value="">All Ratings</option>
+                    <option value="4">4+ Stars</option>
+                    <option value="3">3+ Stars</option>
+                    <option value="2">2+ Stars</option>
+                </select>
+
+                <select id="dietary" aria-label="Select dietary preferences">
+                    <option value="">All Dietary</option>
+                    <option value="vegetarian">Vegetarian</option>
+                    <option value="vegan">Vegan</option>
+                    <option value="gluten-free">Gluten Free</option>
+                    <option value="spicy">Spicy</option>
+                </select>
+            </div>
+        </section>
+
+        <section class="menu-section">
+            <div id="menu-grid" class="menu-grid">
+                <!-- Menu items will be loaded dynamically -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <a href="index.html">Home</a>
+                <a href="menu.html">Menu</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-phone"></i> +1 234 567 890</p>
+                <p><i class="fas fa-envelope"></i> info@hungerhub.com</p>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Food Street, City</p>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 HungerHub. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/api.js"></script>
+    <script src="js/menu.js"></script>
+</body>
+</html> 

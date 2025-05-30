@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - HungerHub</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="nav-brand">
+        <img src="assets/images/logo.png" alt="HungerHub Logo">
+      </div>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="menu.html">Menu</a>
+        <a href="about.html">About</a>
+        <a href="contact.html" class="active">Contact</a>
+      </div>
+      <div class="nav-actions">
+        <a href="cart.html" class="cart-icon">
+          <i class="fas fa-shopping-cart"></i>
+          <span class="cart-count">0</span>
+        </a>
+        <a href="login.html" class="login-btn">Login</a>
+      </div>
+    </nav>
+
+    <main>
+      <section class="contact-section">
+        <div class="contact-content">
+          <h1>Contact Us</h1>
+          <div class="contact-container">
+            <div class="contact-info">
+              <h2>Get in Touch</h2>
+              <p>We'd love to hear from you! Whether you have a question about our services, need help with an order, or want to provide feedback, our team is here to help.</p>
+              
+              <div class="info-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <div>
+                  <h3>Address</h3>
+                  <p>Vidyanagar<br>Hubli, Karnataka 580031</p>
+                </div>
+              </div>
+
+              <div class="info-item">
+                <i class="fas fa-phone"></i>
+                <div>
+                  <h3>Phone</h3>
+                  <p>+91 123 456 7890</p>
+                  <p>+91 987 654 3210</p>
+                </div>
+              </div>
+
+              <div class="info-item">
+                <i class="fas fa-envelope"></i>
+                <div>
+                  <h3>Email</h3>
+                  <p>info@hungerhub.com</p>
+                  <p>support@hungerhub.com</p>
+                </div>
+              </div>
+
+              <div class="info-item">
+                <i class="fas fa-clock"></i>
+                <div>
+                  <h3>Working Hours</h3>
+                  <p>Monday - Friday: 9:00 AM - 10:00 PM</p>
+                  <p>Saturday - Sunday: 10:00 AM - 11:00 PM</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-form">
+              <h2>Share Your Feedback</h2>
+              <form id="feedbackForm">
+                <div class="form-group">
+                  <label for="name">Full Name</label>
+                  <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="email">Email Address</label>
+                  <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="rating">How would you rate your experience?</label>
+                  <div class="rating-options">
+                    <label class="rating-label">
+                      <input type="radio" name="rating" value="5" required>
+                      <span class="rating-star">★★★★★</span>
+                    </label>
+                    <label class="rating-label">
+                      <input type="radio" name="rating" value="4">
+                      <span class="rating-star">★★★★☆</span>
+                    </label>
+                    <label class="rating-label">
+                      <input type="radio" name="rating" value="3">
+                      <span class="rating-star">★★★☆☆</span>
+                    </label>
+                    <label class="rating-label">
+                      <input type="radio" name="rating" value="2">
+                      <span class="rating-star">★★☆☆☆</span>
+                    </label>
+                    <label class="rating-label">
+                      <input type="radio" name="rating" value="1">
+                      <span class="rating-star">★☆☆☆☆</span>
+                    </label>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="feedback-type">What type of feedback do you have?</label>
+                  <select id="feedback-type" name="feedback-type" required>
+                    <option value="">Select feedback type</option>
+                    <option value="food-quality">Food Quality</option>
+                    <option value="service">Service</option>
+                    <option value="delivery">Delivery</option>
+                    <option value="website">Website Experience</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="feedback">Your Feedback</label>
+                  <textarea id="feedback" name="feedback" rows="5" required placeholder="Please share your thoughts with us..."></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Submit Feedback</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>HungerHub</h3>
+          <p>Delivering happiness through food</p>
+        </div>
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <a href="menu.html">Menu</a>
+          <a href="about.html">About Us</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer-section">
+          <h3>Contact Us</h3>
+          <p>Email: info@hungerhub.com</p>
+          <p>Phone: (555) 123-4567</p>
+        </div>
+        <div class="footer-section">
+          <h3>Follow Us</h3>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/eatwith_hungerhub?igsh=MWhlaG1hcWJ0bjUzMA==" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 HungerHub. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        // Update cart count
+        const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+        const cartCount = document.querySelector('.cart-count');
+        if (cartCount) {
+          const totalItems = cartItems.reduce((total, item) => total + item.quantity, 0);
+          cartCount.textContent = totalItems;
+        }
+
+        // Check login status
+        const isLoggedIn = localStorage.getItem('isLoggedIn');
+        const loginBtn = document.querySelector('.login-btn');
+        if (isLoggedIn === 'true') {
+          loginBtn.textContent = 'Logout';
+          loginBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            localStorage.removeItem('isLoggedIn');
+            localStorage.removeItem('userEmail');
+            window.location.href = 'index.html';
+          });
+        }
+
+        // Feedback form submission
+        const feedbackForm = document.getElementById('feedbackForm');
+        if (feedbackForm) {
+          feedbackForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            // Here you would typically send the feedback data to your server
+            alert('Thank you for your feedback! We appreciate your input.');
+            feedbackForm.reset();
+          });
+        }
+      });
+    </script>
+  </body>
+</html> 

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HungerHub - Delicious Indian Food Delivery</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  </head>
+  <body class="home-page">
+    <nav class="navbar">
+      <div class="nav-brand">
+        <img src="assets/images/logo.png" alt="HungerHub Logo">
+      </div>
+      <div class="nav-links">
+        <a href="index.html" class="active">Home</a>
+        <a href="menu.html">Menu</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="nav-actions">
+        <a href="cart.html" class="cart-icon">
+          <i class="fas fa-shopping-cart"></i>
+          <span class="cart-count">0</span>
+        </a>
+        <a href="login.html" class="login-btn">Login</a>
+      </div>
+    </nav>
+
+    <main>
+      <section class="hero">
+        <div class="hero-content">
+          <h1>Delicious Indian Food Delivered to Your Doorstep</h1>
+          <p>Experience authentic Indian cuisine with our wide selection of dishes</p>
+          <a href="menu.html" class="cta-button">Order Now</a>
+        </div>
+      </section>
+
+      <section class="features">
+        <div class="feature-card">
+          <i class="fas fa-utensils"></i>
+          <h3>Authentic Taste</h3>
+          <p>Experience the real flavors of India</p>
+        </div>
+        <div class="feature-card">
+          <i class="fas fa-truck"></i>
+          <h3>Fast Delivery</h3>
+          <p>Quick and reliable delivery service</p>
+        </div>
+        <div class="feature-card">
+          <i class="fas fa-star"></i>
+          <h3>Quality Food</h3>
+          <p>Made with fresh ingredients</p>
+        </div>
+      </section>
+
+      <section class="popular-dishes">
+        <h2>Popular Dishes</h2>
+        <div class="dishes-grid">
+          <div class="dish-card">
+            <img src="assets/images/Butter Chicken.jpg" alt="Butter Chicken">
+            <h3>Butter Chicken</h3>
+            <p>Rich and creamy curry</p>
+          </div>
+          <div class="dish-card">
+            <img src="assets/images/Chiken biriyani.jpg" alt="Chicken Biryani">
+            <h3>Chicken Biryani</h3>
+            <p>Fragrant and flavorful</p>
+          </div>
+          <div class="dish-card">
+            <img src="assets/images/Masala-Dosa.jpg" alt="Masala Dosa">
+            <h3>Masala Dosa</h3>
+            <p>Crispy and delicious</p>
+          </div>
+          <div class="dish-card">
+            <img src="assets/images/Pav Bhaji.jpg" alt="Pav Bhaji">
+            <h3>Pav Bhaji</h3>
+            <p>Mumbai's favorite street food</p>
+          </div>
+          <div class="dish-card">
+            <img src="assets/images/Pani Puri.jpg" alt="Pani Puri">
+            <h3>Pani Puri</h3>
+            <p>Tangy and refreshing</p>
+          </div>
+          <div class="dish-card">
+            <img src="assets/images/Samosa.jpg" alt="Samosa">
+            <h3>Samosa</h3>
+            <p>Crispy and spicy</p>
+          </div>
+          <div class="dish-card">
+            <img src="assets/images/Dal Makhani.jpg" alt="Dal Makhani">
+            <h3>Dal Makhani</h3>
+            <p>Rich and creamy lentils</p>
+          </div>
+          <div class="dish-card">
+            <img src="assets/images/Aloo gobi masala curry.jpg" alt="Aloo Gobi Masala">
+            <h3>Aloo Gobi Masala</h3>
+            <p>Spiced potatoes and cauliflower</p>
+          </div>
+        </div>
+        <a href="menu.html" class="view-all-btn">View Full Menu</a>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>HungerHub</h3>
+          <p>Delivering happiness through food</p>
+        </div>
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <a href="menu.html">Menu</a>
+          <a href="about.html">About Us</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer-section">
+          <h3>Contact Us</h3>
+          <p>Email: info@hungerhub.com</p>
+          <p>Phone: (555) 123-4567</p>
+        </div>
+        <div class="footer-section">
+          <h3>Follow Us</h3>
+          <div class="social-links">
+            <a href="https://www.facebook.com/share/1GF942j6MS/" target="_blank" rel="noopener"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 HungerHub. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        // Update cart count
+        const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+        const cartCount = document.querySelector('.cart-count');
+        if (cartCount) {
+          const totalItems = cartItems.reduce((total, item) => total + item.quantity, 0);
+          cartCount.textContent = totalItems;
+        }
+
+        // Check login status
+        const isLoggedIn = localStorage.getItem('isLoggedIn');
+        const loginBtn = document.querySelector('.login-btn');
+        if (isLoggedIn === 'true') {
+          loginBtn.textContent = 'Logout';
+          loginBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            localStorage.removeItem('isLoggedIn');
+            localStorage.removeItem('userEmail');
+            window.location.href = 'index.html';
+          });
+        }
+      });
+    </script>
+  </body>
+</html> 
